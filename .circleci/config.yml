@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10 # the primary container, where your job's commands are run
+      - image: circleci/node:16.2.4 # the primary container, where your job's commands are run
     branches:
       only:
         - dev
