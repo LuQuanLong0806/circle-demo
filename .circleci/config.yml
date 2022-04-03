@@ -1,0 +1,8 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.2.4 # the primary container, where your job's commands are run
+    steps:
+      - run: echo "hello world" # run the `echo` command
+      - run: npm -v # run the `echo` command
