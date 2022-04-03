@@ -7,13 +7,13 @@ jobs:
       only:
         - dev
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "ef:94:ff:73:37:a9:7b:ff:29:23:6e:53:40:92:14:0e"
-      - checkout
-      - run:
-        name: Install
-        command: yarn install
-      - run: 
-        name: Build
-        command: yarn build
+        - add_ssh_keys:
+            fingerprints:
+              - "ef:94:ff:73:37:a9:7b:ff:29:23:6e:53:40:92:14:0e"
+        - checkout
+        - run:
+            name: Install
+            command: yarn install
+        - run: 
+            name: Build
+            command: yarn build
