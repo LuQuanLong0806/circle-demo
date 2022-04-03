@@ -1,11 +1,15 @@
 version: 2.1
+nightly:
+     triggers:
+       - schedule:
+           filters:
+             branches:
+               only:
+                 - dev
 jobs:
   build:
     docker:
       - image: circleci/node:16.2.4 # the primary container, where your job's commands are run
-    branches:
-      only:
-        - dev
     steps:
         - add_ssh_keys:
             fingerprints:
